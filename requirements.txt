@@ -1,0 +1,11 @@
+beautifulsoup4==4.10.0
+colorama==0.4.4
+Flask==2.0.2
+httpx==0.15.5
+python-dotenv==0.19.2
+requests==2.25.1
+requests_futures==1.0.0
+termcolor==1.1.0
+torrequest==0.1.0
+tqdm==4.62.2
+trio==0.19.0

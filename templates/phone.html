@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/style.css" rel="stylesheet">
+    <title>Phone OSINT</title>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">OSINT Tool</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/username">Username Lookup</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/email">Email Lookup</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/phone">Phone Lookup</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/website">Website Lookup</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <h1 style="margin: 30px;">Phone Lookup</h1>
+    <hr>
+    {% if data %}
+      <div class="container bg-light" style="margin-top:50px;height: 600px;width: 1000px;">
+        <h3>Phone Lookup:  {{phone}}</h3>
+        <table class="table table-striped">
+          {%for x in data:%}
+            
+            <tr>
+              <td width="10px"><b>{{dname[loop.index0]}}</b></td>
+              {%if dname[loop.index0] == 'Image:' %}
+                <td><img src="{{x}}" alt="{{x}}" width="300px" height="300px"></td>
+              {%else%}
+                <td>{{x}}</td>
+              {%endif%}
+            </tr>
+          {%endfor%}
+        </table>
+      </div>
+    {% else %}
+      <div class="container w-100 bg-light" style="margin-top:50px;height:200px;padding-left: 290px;" id="maininput">
+        <div class="row">
+          <div class="col-sm">
+            <input class="form-control w-100" type="text" placeholder="Enter Phone No" id="phone">
+          </div>
+          <div class="col-sm">
+            <button class='btn btn-outline-primary' style='width: 100px;' onclick="goPhone()"><i class="fa fa-search"></i></button>
+          </div>
+        </div> 
+      </div>
+      
+    {% endif %}
+    <div id="loader" style="display: none;"></div>
+    <!-- <div class="footerx bg-secondary">
+      <p style="margin-top: 5px;font-size: 20px;">Made with ❤️ by R4JVE3R</p>
+    </div> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="/static/main.js"></script>
+</body>
+</html>
