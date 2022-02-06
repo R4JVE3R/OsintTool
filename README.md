@@ -37,7 +37,7 @@ This is a combined basic tool for Osint. It can be used in both GUI and CLI mode
 
 ## Installation
 1. Python3 must be installed on your system.
-2. Git clone this repo or download the zip and extract it in a folder. `git clone https://github.com/R4JVE3R/test.git`
+2. Git clone this repo or download the zip and extract it in a folder. `git clone https://github.com/R4JVE3R/OsintTool.git`
 3. Install the requirements. For that go to `OsintTool` folder and run this command. `pip install -r requirements.txt`
 ## Setup
 - Goto `OsintTool` folder, open .env file and edit environment variable's values accordingly.
@@ -59,6 +59,9 @@ This is a combined basic tool for Osint. It can be used in both GUI and CLI mode
      2. Email lookup: `python OsintTool.py -e test@test.com` 
      3. Phone lookup: `python OsintTool.py -p 1234567890`
      4. Website lookup: `python OsintTool.py -w google.com`
+ 2. To use it in GUI mode.
+    - Run server.py `python server.py`
+    - Navigate to http://127.0.0.1:5000 to access GUI mode.
 ## Credits
 1. [Sherlock](https://github.com/sherlock-project/sherlock) - For username lookup, I have used sherlock and modified it according to my requirements.
 2. [Holehe](https://github.com/megadose/holehe) - In email lookup, to check whether the given email is used to different websites, I have used holehe and modified it according to my requirements.
