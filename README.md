@@ -1,5 +1,5 @@
 # Osint Tool
-This is a combined basic tool for Osint. It can be used in both GUI and CLI mode. I made this tool as a college project 3 months back.
+This is a combined tool for Osint. It can be used in both GUI and CLI mode.
 
 ![image](https://user-images.githubusercontent.com/25560539/151649162-5c905d51-2005-46ca-a866-4c1c6a5f1a9c.png)
 
